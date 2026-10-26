@@ -1,0 +1,2 @@
+# Let members of the input group read/grab keyd's virtual keyboard.
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="keyd virtual keyboard", GROUP="input", MODE="0660"
