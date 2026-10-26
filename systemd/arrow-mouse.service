@@ -1,0 +1,14 @@
+[Unit]
+Description=Keyboard-controlled virtual mouse
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/arrow-mouse.py
+Restart=on-failure
+RestartSec=2
+KillSignal=SIGINT
+TimeoutStopSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
